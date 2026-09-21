@@ -1,0 +1,14 @@
+services:
+
+  website:
+    build: .
+    ports:
+      - "8080:80"
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
